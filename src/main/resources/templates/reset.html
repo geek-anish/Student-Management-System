@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Reset</title>
+</head>
+<body>
+<h2>Password Reset</h2>
+
+<!-- Display an error message if there is one -->
+<p th:if="${error}" class="error" th:text="${error}"></p>
+
+
+<!-- Password Reset Form -->
+<form th:action="@{/reset}" method="post">
+    <div>
+        <label for="email">Username (Email or Username):</label>
+        <input type="text" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+    <div>
+        <button type="submit">Reset Password</button>
+    </div>
+</form>
+</body>
+</html>
