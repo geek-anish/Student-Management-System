@@ -17,7 +17,7 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
     @NotNull
-    @Size(min = 2, max = 30)
+    @Size(min = 2, max = 31)
     @Email
     @Column(name = "email")
     private String email;
